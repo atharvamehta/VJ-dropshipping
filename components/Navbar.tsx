@@ -7,8 +7,8 @@ const links = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
-  { label: 'Packages', href: '#packages' },
-  { label: 'Portfolio', href: '#portfolio' },
+  /*{ label: 'Packages', href: '#packages' },*/
+  /*{ label: 'Portfolio', href: '#portfolio' },*/
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -81,18 +81,21 @@ export default function Navbar() {
         {/* Logo */}
         <div style={{ cursor: 'pointer' }} onClick={() => handleLinkClick('#home')}>
           <span style={{
-            fontFamily: "'Dancing Script', cursive",
-            fontSize: 'clamp(22px, 4vw, 28px)',
-            fontWeight: 700,
-            fontStyle: 'italic',
-            background: 'linear-gradient(135deg, #C9A84C, #FFD700, #C9A84C)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            filter: 'drop-shadow(0 0 8px rgba(201,168,76,0.4))',
-          }}>
-            VJ
-          </span>
+  fontFamily: "'Cormorant Garamond', serif",
+  fontSize: 'clamp(26px, 4vw, 34px)',
+  fontWeight: 700,
+  fontStyle: 'italic',
+  lineHeight: 1,
+  paddingBottom: '2px',
+  display: 'inline-block',
+  background: 'linear-gradient(135deg, #C9A84C, #FFD700, #C9A84C)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundClip: 'text',
+  filter: 'drop-shadow(0 0 8px rgba(201,168,76,0.4))',
+}}>
+  VJ
+</span>
           <span style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: 'clamp(10px, 1.5vw, 12px)',

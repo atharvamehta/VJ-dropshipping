@@ -168,37 +168,66 @@ export default function About() {
         {/* Photo placeholder */}
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div style={{
-            width: 'clamp(200px, 35vw, 280px)',
-            height: 'clamp(240px, 42vw, 340px)',
-            borderRadius: '12px',
-            background: 'linear-gradient(135deg, rgba(201,168,76,0.08), rgba(123,63,228,0.08))',
-            border: '1px solid rgba(201,168,76,0.25)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            position: 'relative',
-            boxShadow: '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1)',
-            animation: 'float 4s ease-in-out infinite',
-          }}>
-            <span style={{ fontSize: '64px', opacity: 0.4 }}>👤</span>
-            {/* Corner accents */}
-            {['top-left', 'top-right', 'bottom-left', 'bottom-right'].map((pos) => (
-              <div key={pos} style={{
-                position: 'absolute',
-                width: '20px', height: '20px',
-                borderColor: '#C9A84C',
-                borderStyle: 'solid',
-                opacity: 0.6,
-                top: pos.includes('top') ? '-1px' : 'auto',
-                bottom: pos.includes('bottom') ? '-1px' : 'auto',
-                left: pos.includes('left') ? '-1px' : 'auto',
-                right: pos.includes('right') ? '-1px' : 'auto',
-                borderWidth: pos.includes('top')
-                  ? pos.includes('left') ? '2px 0 0 2px' : '2px 2px 0 0'
-                  : pos.includes('left') ? '0 0 2px 2px' : '0 2px 2px 0',
-              }} />
-            ))}
-          </div>
+  position: 'relative',
+  width: 'clamp(200px, 35vw, 280px)',
+  height: 'clamp(240px, 42vw, 340px)',
+  animation: 'float 4s ease-in-out infinite',
+  flexShrink: 0,
+}}>
+  {/* Actual photo */}
+  <img
+    src="/logo2.jpeg"
+    alt="Vaibhav Jain — VJ Dropshipping"
+    style={{
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      objectPosition: 'center top',
+      borderRadius: '12px',
+      display: 'block',
+    }}
+  />
+
+  {/* Gold overlay frame */}
+  <div style={{
+    position: 'absolute',
+    inset: 0,
+    borderRadius: '12px',
+    border: '1px solid rgba(201,168,76,0.35)',
+    pointerEvents: 'none',
+  }} />
+
+  {/* Glow behind photo */}
+  <div style={{
+    position: 'absolute',
+    inset: '-8px',
+    borderRadius: '16px',
+    background: 'radial-gradient(ellipse, rgba(201,168,76,0.12) 0%, transparent 70%)',
+    filter: 'blur(12px)',
+    zIndex: -1,
+    pointerEvents: 'none',
+  }} />
+
+  {/* Corner accents */}
+  {['top-left', 'top-right', 'bottom-left', 'bottom-right'].map((pos) => (
+    <div key={pos} style={{
+      position: 'absolute',
+      width: '20px',
+      height: '20px',
+      borderColor: '#C9A84C',
+      borderStyle: 'solid',
+      opacity: 0.7,
+      top: pos.includes('top') ? '-1px' : 'auto',
+      bottom: pos.includes('bottom') ? '-1px' : 'auto',
+      left: pos.includes('left') ? '-1px' : 'auto',
+      right: pos.includes('right') ? '-1px' : 'auto',
+      borderWidth: pos.includes('top')
+        ? pos.includes('left') ? '2px 0 0 2px' : '2px 2px 0 0'
+        : pos.includes('left') ? '0 0 2px 2px' : '0 2px 2px 0',
+      pointerEvents: 'none',
+    }} />
+  ))}
+</div>
         </div>
 
         {/* Text */}
@@ -242,9 +271,9 @@ export default function About() {
           {/* Stat pills */}
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '8px' }}>
             {[
-              { num: '50+', label: 'Clients' },
-              { num: '₹2Cr+', label: 'Generated' },
-              { num: '5+', label: 'Years Exp.' },
+              { num: '250+', label: 'Clients' },
+              { num: '₹5Cr+', label: 'Generated' },
+              { num: '4+', label: 'Years Exp.' },
             ].map((stat, i) => (
               <div key={i} style={{
                 padding: '10px 20px',

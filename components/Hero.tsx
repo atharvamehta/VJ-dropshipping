@@ -107,7 +107,7 @@ export default function Hero() {
     <section
      id="home"
       className="relative w-full flex flex-col items-center justify-center overflow-hidden"
-      style={{ minHeight: '100vh', background: '#050508' }}
+      style={{ minHeight: '100vh', background: '#050508' , overflowX: 'hidden' , overflowY: 'visible' , }}
     >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }} />
 
@@ -117,7 +117,7 @@ export default function Hero() {
       {/* Main content */}
       <div
         ref={vjRef}
-        style={{ zIndex: 2, opacity: 0, width: '100%', maxWidth: '900px', padding: '100px 20px 80px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}
+        style={{ zIndex: 2, opacity: 0, width: '100%', maxWidth: '900px', padding: '100px 20px 80px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' , overflow: 'visible' }}
       >
         {/* Badge */}
         <div style={{
@@ -138,37 +138,41 @@ export default function Hero() {
         </div>
 
         {/* VJ text — clipped so J stays in frame */}
-        <div style={{
-          position: 'relative',
-          lineHeight: 1,
-          marginBottom: '4px',
-          overflow: 'visible',
-          paddingBottom: '10px',
-        }}>
-          <h1 style={{
-            fontFamily: "'Dancing Script', cursive",
-            fontSize: 'clamp(90px, 20vw, 190px)',
-            fontWeight: 700,
-            fontStyle: 'italic',
-            lineHeight: 1,
-            margin: 0,
-            padding: '0 10px',
-            background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 25%, #FFD700 50%, #C9A84C 75%, #8B6914 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            filter: 'drop-shadow(0 0 35px rgba(201,168,76,0.55))',
-            display: 'block',
-          }}>
-            VJ
-          </h1>
-          {/* Glow behind */}
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse, rgba(201,168,76,0.18) 0%, transparent 70%)',
-            filter: 'blur(25px)', zIndex: -1,
-          }} />
-        </div>
+        {/* VJ text — fully visible */}
+<div style={{
+  position: 'relative',
+  marginBottom: '4px',
+  padding: '0 16px 30px 16px',
+  overflow: 'visible',
+  lineHeight: 1,
+}}>
+  <h1 style={{
+  fontFamily: "'Cormorant Garamond', serif",
+  fontSize: 'clamp(110px, 24vw, 220px)',
+  fontWeight: 700,
+  fontStyle: 'italic',
+  lineHeight: 0.85,
+  margin: '0',
+  padding: '20px 10px 40px 10px',
+  background: 'linear-gradient(135deg, #8B6914 0%, #C9A84C 25%, #FFD700 50%, #C9A84C 75%, #8B6914 100%)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundClip: 'text',
+  filter: 'drop-shadow(0 0 35px rgba(201,168,76,0.55))',
+  display: 'block',
+  overflow: 'visible',
+}}>
+  VJ
+</h1>
+  <div style={{
+    position: 'absolute',
+    inset: 0,
+    background: 'radial-gradient(ellipse, rgba(201,168,76,0.18) 0%, transparent 70%)',
+    filter: 'blur(25px)',
+    zIndex: -1,
+    pointerEvents: 'none',
+  }} />
+</div>
 
         {/* DROPSHIPPING */}
         <p style={{
@@ -218,7 +222,7 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', marginBottom: '40px' }}>
           <button
-            onClick={() => window.open('https://wa.me/91XXXXXXXXXX', '_blank')}
+            onClick={() => window.open('https://wa.me/919203308903', '_blank')}
             style={{
               padding: 'clamp(12px,2vw,16px) clamp(24px,4vw,40px)',
               borderRadius: '3px', border: 'none', cursor: 'pointer',
