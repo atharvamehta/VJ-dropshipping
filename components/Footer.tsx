@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer style={{
+    <footer id="contact" style={{
       background: '#050508',
       borderTop: '1px solid rgba(201,168,76,0.12)',
       padding: 'clamp(48px, 8vw, 80px) clamp(20px, 6vw, 60px) clamp(24px, 4vw, 36px)',
