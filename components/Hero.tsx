@@ -223,7 +223,7 @@ export default function Hero() {
         <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '16px', justifyContent: 'center', marginBottom: '40px' }}>
           <button
             onClick={() => window.open('https://wa.me/919203308903', '_blank')}
-            style={{
+             style={{
               padding: 'clamp(12px,2vw,16px) clamp(24px,4vw,40px)',
               borderRadius: '3px', border: 'none', cursor: 'pointer',
               fontSize: 'clamp(12px,1.5vw,14px)', fontWeight: 700,
@@ -237,27 +237,9 @@ export default function Hero() {
             onMouseEnter={e => { const el = e.currentTarget; el.style.boxShadow = '0 0 50px rgba(201,168,76,0.65)'; el.style.transform = 'translateY(-3px)' }}
             onMouseLeave={e => { const el = e.currentTarget; el.style.boxShadow = '0 0 25px rgba(201,168,76,0.4)'; el.style.transform = 'translateY(0)' }}
           >
-            🚀 Start Your Journey
+            🚀 Start Your Journey    
           </button>
 
-          <button
-            style={{
-              padding: 'clamp(11px,2vw,15px) clamp(24px,4vw,40px)',
-              borderRadius: '3px', cursor: 'pointer',
-              fontSize: 'clamp(12px,1.5vw,14px)', fontWeight: 600,
-              letterSpacing: '0.10em', textTransform: 'uppercase',
-              color: '#F0EDE8',
-              background: 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(201,168,76,0.4)',
-              backdropFilter: 'blur(10px)',
-              transition: 'all 0.3s ease',
-              whiteSpace: 'nowrap',
-            }}
-            onMouseEnter={e => { const el = e.currentTarget; el.style.borderColor = 'rgba(201,168,76,0.9)'; el.style.background = 'rgba(201,168,76,0.08)'; el.style.transform = 'translateY(-3px)' }}
-            onMouseLeave={e => { const el = e.currentTarget; el.style.borderColor = 'rgba(201,168,76,0.4)'; el.style.background = 'rgba(255,255,255,0.03)'; el.style.transform = 'translateY(0)' }}
-          >
-            ✦ See Our Work
-          </button>
         </div>
 
         {/* Stats */}
@@ -288,7 +270,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 flex flex-col items-center gap-2" style={{ zIndex: 2 }}>
-        <span style={{ color: '#8B8B9E', fontSize: '10px', letterSpacing: '0.4em', textTransform: 'uppercase' }}>scroll</span>
+        <span style={{ color: '#8B8B9E', fontSize: '10px', letterSpacing: '0.4em', textTransform: 'uppercase' }}></span>
         <div style={{
           width: '1px', height: '45px',
           background: 'linear-gradient(to bottom, #C9A84C, transparent)',
