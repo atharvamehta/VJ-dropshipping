@@ -141,8 +141,8 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <button
+        {/* Desktop CTA 
+        < button
           className="hidden md:block"
           onClick={() => window.open('https://wa.me/91XXXXXXXXXX', '_blank')}
           style={{
@@ -170,7 +170,7 @@ export default function Navbar() {
           }}
         >
           Get Started
-        </button>
+        </button> */}
 
         {/* Hamburger — mobile only */}
         <button
